@@ -1,14 +1,14 @@
 .sign_up_img {
 	height: auto;
-	width: 300px;
+	width: 400px;
 }
 body {
+  overflow-y: scroll;
   margin:0; 
   background-color: #FAFAFA;
 
 }
 nav {
-  margin-right: 0px; 
   border-bottom: 1px solid #dbdbdb;
   background-color: #ffffff;
   height: 75px;
@@ -60,7 +60,7 @@ nav {
   padding: 10px 24px 0px 24px;
 }
 .post_comments {
-  padding: 10px 25px;
+  padding: 0px 25px;
 }
 
 .prof_pic_small{
@@ -73,7 +73,6 @@ border-radius: 50%;
   color: #a5a7aa;
   font-weight: 500;
 }
-/* master.scss */ 
 .pp{
   max-width: 950px;
   margin: 0 auto;
@@ -123,9 +122,52 @@ border-radius: 50%;
   height: 28px;
   width: 28px;
 }
+.post_like {
+  .fa {
+    font-size: 20px;
+  }
+}
+.pannel-body{
+background-color: #ffffff;
+  width: 350px;
+  height: 270px;
+  border: 1px solid #efefef;
+  margin: 0 auto;
+}
+.panel-default{
+  margin-top: 45px;
+  box-shadow: 10px;
+  margin-right: 40px;
 
-/*.profile_show{
-  height: 250px;
-width: 250px;
-margin-bottom: 15px;
-}*/
+}
+.image{
+  margin-left: 100px;
+}
+.login{
+  margin-left: 200px;
+  font-family:'Kushan Script',cursive;
+}
+.sign{
+  margin-top: 35px;
+  font-family:'Kushan Script',cursive;
+
+}
+.newpost{
+  padding: 10px 10px 10px;
+  background-color: whitesmoke;
+}
+.fa-pencil{
+  padding-right: 20px;
+}
+.name{
+  padding-right: 10px;
+
+}
+.text-center{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#font{
+  color: purple;
+}

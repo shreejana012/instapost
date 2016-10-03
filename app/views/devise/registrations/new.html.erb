@@ -1,48 +1,41 @@
-<div class = "row">
-  <div class="col-md-6">
-    <div class="image">
-      <%= image_tag("ad.png", alt: 'Pictures', class: "sign_up_img") %>
-    </div>
+<div class="col-md-6">
+  <div class="image">
+    <%= image_tag("Untitled-1(1).png", alt: 'Pictures', class: "sign_up_img") %>
   </div>
-  <div class = "col-md-6">
-    <div class = "panel panel-default">
-      <div class = "panel panel-body">
-        <h2>Sign up</h2>
-
+</div>
+<div class = "col-md-4 sign">
+  <div class = "panel panel-default">
+    <div class = "panel panel-body ">
+      
+      <h2 class = "text-center">Sign up</h2>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= devise_error_messages! %>
-
-          <div class="field">
-            
-            <%= f.text_field :name, autofocus: true, required: true, placeholder:'Name' %>
-          </div><br />
-
-          <div class="field">
-            <%= f.email_field :email, required: true, placeholder: 'Email' %>
-          </div><br />
-
-          <div class="field">
-            <% if @minimum_password_length %>
-            <% end %>
-            <%= f.password_field :password, autocomplete: "off", required: true,placeholder: 'Password' %>
-          </div><br />
-
-          <div class="field">
-            
-            <%= f.password_field :password_confirmation, autocomplete: "off",placeholder: 'Re-type password' %>
-          </div><br />
-
-          <div class="field">
-          	<%= f.label 'Profile Picture' %><br>
-            <%= f.file_field :photo %>
-          </div>  <br />
-
-          <div class="actions">
-            <%= f.submit "Sign up" %>
-          </div>
+        <%= devise_error_messages! %>
+      <div class="field">
+        <%= f.text_field :name, autofocus: true, required: true, placeholder:'Name' %>
+      </div><br />
+      <div class="field">
+        <%= f.email_field :email, required: true, placeholder: 'Email' %>
+      </div><br />
+      <div class="field">
+        <% if @minimum_password_length %>
         <% end %>
-        <p>Have an account?<%= render "devise/shared/links" %></p>
+        <%= f.password_field :password, autocomplete: "off", required: true,placeholder: 'Password' %>
+      </div><br />
+      <div class="field">
+        <%= f.password_field :password_confirmation, autocomplete: "off",placeholder: 'Re-type password' %>
+      </div><br />
+      <div class="field ">
+        <%= f.label 'Profile Picture'%><br>
+        <%= f.file_field :photo%>
+      </div> <br>
+      <div class="actions text-center">
+        <%= f.submit "Sign up",class: 'btn btn-success' %>
       </div>
+        <% end %>
+      <p class = "text-center">Have an account?<%= render "devise/shared/links" %></p>
     </div>
   </div>
 </div>
+<div class = "col-md-2">
+</div>
+

@@ -1,6 +1,16 @@
-<h1>Post</h1>
-<%= simple_form_for @post do |f| %>
-	<%= f.input :photo %>
-	<%= f.input :description %>
-	<%= f.submit 'Update', class:'btn btn-default btn-block' %>
-<% end %>
+<div class = "col-md-4"></div>
+	<div class = "col-md-4">
+		<div class = "panel-body">
+			<div class = "post_box newpost">
+				<h4 class = "brand text-center">Edit Post</h4>
+					<%= simple_form_for @post do |f| %>
+					<%= f.input :photo %>
+					<%= f.input :description %>
+					<%= f.submit 'Update', class:'btn btn-success', data: { disable_with: "Updating..." } %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class = "col-md-4">
+</div>
