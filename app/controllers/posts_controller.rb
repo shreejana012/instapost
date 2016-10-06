@@ -3,8 +3,8 @@
   	before_action :is_owner?, only: [:edit, :update]
     before_action :is_owner?, only: [:edit, :update, :destroy]
 	def index
-    @posts = Post.all
-    @posts = Post.order('created_at DESC').paginate(:page => params[:page], :per_page => 3)
+    
+    @posts = Post.all.order('created_at DESC').includes(:user, comments: :user).paginate(:page => params[:page], :per_page => 3)
   end
 
 	def new

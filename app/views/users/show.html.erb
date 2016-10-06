@@ -8,15 +8,17 @@
 <div class= "col-xs-8">
 	<div class = "user_header">
 		<div class= "row">
-<div class="username"><%= @user.name %>
 
+<div class="username"><%= @user.name %>
+	</div><hr>
+<div class = "col-xs-2">
 <span class = "count">
 <%= pluralize(@user.posts.count, 'post')%>
 </span>
-
 </div>
+
 <div class= "col-xs-6">
-	<%= link_to 'Edit Profile',edit_user_registration_path(@user), class: 'user_edit_button btn btn-default' if user_signed_in? && @user == current_user %>
+	<%= link_to 'Edit Profile',edit_user_registration_path(@user), class: 'user_edit_button btn btn-danger' if user_signed_in? && @user == current_user %>
 	</div>
 	
 </div>
@@ -30,8 +32,8 @@
 
 <div class = "prof_post_box">
 	<div class = "row">
-		<div class = "col-xs-2"></div>
-		<div class ="col-xs-8 myprof">
+		<div class = "col-xs-3"></div>
+		<div class ="col-xs-6 myprof">
         <% @user.posts.each do |post| %>
         <%= image_tag post.photo_url,class: 'prof_show' %>
 
@@ -39,7 +41,7 @@
 
 <% end %>
 </div>
-<div class = "col-xs-2"></div>
+<div class = "col-xs-3"></div>
 
 </div>
 </div>

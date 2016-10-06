@@ -91,8 +91,11 @@ border-radius: 50%;
 }
 
 .count{
-  color: #34373b;
+  color: black;
   font-weight: 600;
+  font-size: 20px;
+   
+
 }
 
 .prof_show {
@@ -169,4 +172,8 @@ background-color: #ffffff;
 }
 .pagination{
   display: none !important;
+}
+.user_edit_button{
+  margin-top: 0px;
+  margin-bottom: 30px;
 }
